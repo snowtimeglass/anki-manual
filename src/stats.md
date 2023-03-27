@@ -53,31 +53,6 @@ Anki has no way of knowing which deck the deleted cards belonged to),
 but will be included when you look at statistics for the whole
 collection.
 
-## Types of Cards
-
-The stats window uses some terms that you may not be familiar with:
-
-**Mature**  
-A mature card is one that has an interval of 21 days or greater.
-
-**Young**  
-A young card is one that has an interval of less than 21 days, but is
-not in learning.
-
-**Learn**  
-A learning card is one that is still in learning mode (using whatever
-steps may be defined in the deck’s options).
-
-**Relearn**  
-A relearning card is a card that you have failed in review mode, thus
-returning it to learning mode to be relearned.
-
-**Unseen**  
-An unseen card is one that has been added to your collection but has not
-yet entered learning mode. Unseen cards are sometimes referred to as
-"new" cards, especially when they are in the "new" queue to be shown for
-the first time.
-
 ## Today
 
 At the top of the statistics window is a brief list of textual
@@ -124,7 +99,7 @@ This graph counts the number of card reviews you have done. The bars may
 correspond to days, weeks, or months, depending on the time period
 you’ve selected at the bottom of the screen. The differently colored
 blocks show how many of the cards you answered on each day were
-[mature](stats.md#types-of-cards), young, relearning, or learning cards.
+[mature](getting-started.md#types-of-cards), young, relearning, or learning cards.
 There is also a separate group for cards answered in a filtered/cram
 deck while they were not due. The line and the right axis shows the
 cumulative total for each type of review as time progresses across the
@@ -162,7 +137,7 @@ how significant the results are).
 **Answer Buttons**  
 This graph shows how many times you’ve chosen the Again, Hard, Good, or
 Easy button while studying learning/new, young, and
-[mature](stats.md#types-of-cards) cards. Anki also displays the percentage
+[mature](getting-started.md#types-of-cards) cards. Anki also displays the percentage
 of correct reviews for each type of card.
 
 ## Manual Analysis
