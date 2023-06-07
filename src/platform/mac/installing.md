@@ -8,8 +8,7 @@ Recent Anki releases require a Mac running macOS 10.13.4 or later.
 
 The last Anki release that supported macOS 10.10 to 10.13.3 was
 2.1.35-alternate. If you're on an old machine, you can obtain the old
-version from the [releases
-page](https://github.com/ankitects/anki/releases).
+version from the [releases page](https://github.com/ankitects/anki/releases).
 
 ## Installing
 
@@ -29,11 +28,13 @@ Advantages of the Qt6 version:
 - Native support for recent Apple Silicon Macs (faster, better battery life).
 - Various bugfixes, including things like better support for less common languages.
 - Security updates. Support for the Qt5 library was discontinued in Nov 2020,
-meaning that any security flaws discovered since then will remain unfixed.
+  meaning that any security flaws discovered since then will remain unfixed.
 
 Disadvantages of the Qt6 version:
 
 - Tabbed windows (eg in full screen) are no longer possible.
+- Some Mac users have reported that the Intel Qt5 version was faster and
+  more reliable for them.
 - Some add-ons currently only work with the Qt5 version.
 
 ## Upgrading
@@ -44,10 +45,9 @@ overwrite the old version. Your card data will be preserved.
 
 ## Add-on Compatibility
 
-Some add-ons have not been updated to support the latest Anki release yet. If an
-add-on you depend on has not been ported to the latest release yet, you may have
-more luck with 2.1.44 from the [releases
-page](https://github.com/ankitects/anki/releases).
+Some add-ons may not always work with the latest Anki release. If you upgrade to
+the latest Anki version and find an add-on you cannot live without stops working,
+you can download older Anki versions from the [releases page](https://github.com/ankitects/anki/releases).
 
 ## Problems
 

@@ -7,15 +7,14 @@
 The packaged version requires a recent 64 bit Intel/AMD Linux with glibc, and common
 libraries like libwayland-client and systemd. If you are on a different
 architecture, or a barebones Linux distro, you will not be able to use the
-packaged version, but you may be able to use the [Python
-wheels](https://betas.ankiweb.net/#via-pypipip)
+packaged version, but you may be able to use the [Python wheels](https://betas.ankiweb.net/#via-pypipip)
 instead.
 
 On recent Ubuntu installations, please use the following before
 installing:
 
 ```shell
-sudo apt install libxcb-xinerama0
+sudo apt install libxcb-xinerama0 libxcb-cursor0
 ```
 
 If Anki fails to start after installing, you may be [missing other libraries](./missing-libraries.md).
@@ -54,7 +53,7 @@ Advantages of the Qt6 version:
 - Better Wayland support.
 - Various bugfixes, including things like better support for less common languages.
 - Security updates. Support for the Qt5 library was discontinued in Nov 2020,
-meaning that any security flaws discovered since then will remain unfixed.
+  meaning that any security flaws discovered since then will remain unfixed.
 
 Disadvantages of the Qt6 version include:
 
@@ -75,10 +74,9 @@ If you wish to downgrade to a previous version, please make sure you
 
 ## Add-on Compatibility
 
-Some add-ons have not been updated to support the latest Anki release yet. If an
-add-on you depend on has not been ported to the latest release yet, you may have
-more luck with 2.1.44 from the [releases
-page](https://github.com/ankitects/anki/releases).
+Some add-ons may not always work with the latest Anki release. If you upgrade to
+the latest Anki version and find an add-on you cannot live without stops working,
+you can download older Anki versions from the [releases page](https://github.com/ankitects/anki/releases).
 
 ## Problems
 

@@ -10,8 +10,7 @@ Recent Anki releases require a computer running the 64 bit version of Windows
 - The last Anki release that supported Windows 7 and 8.1 was Anki 2.1.49.
 - The last Anki release that supported 32 bit Windows was Anki 2.1.35-alternate.
 
-If you're on an old machine, you can obtain old releases from the [releases
-page](https://github.com/ankitects/anki/releases).
+If you're on an old machine, you can obtain old releases from the [releases page](https://github.com/ankitects/anki/releases).
 
 ## Installing
 
@@ -35,10 +34,12 @@ Advantages of the Qt6 version:
 - Various bugfixes, including things like better support for less common languages.
 - Very large images load faster than the Qt5 version.
 - Security updates. Support for the Qt5 library was discontinued in Nov 2020,
-meaning that any security flaws discovered since then will remain unfixed.
+  meaning that any security flaws discovered since then will remain unfixed.
 
 Disadvantages of the Qt6 version:
 
+- Some users experience freezes when using [a custom shortcut key to switch input languages](https://github.com/ankitects/anki/issues/1105). This issue can be worked around in the
+  Qt5 version by switching the video driver to ANGLE, but ANGLE is not available in Qt6.
 - Some add-ons currently only work with the Qt5 version.
 
 ## Upgrading
@@ -57,10 +58,9 @@ If you wish to downgrade to a previous version, please make sure you
 
 ## Add-on Compatibility
 
-Some add-ons have not been updated to support the latest Anki release yet. If an
-add-on you depend on has not been ported to the latest release yet, you may have
-more luck with 2.1.44 from the [releases
-page](https://github.com/ankitects/anki/releases).
+Some add-ons may not always work with the latest Anki release. If you upgrade to
+the latest Anki version and find an add-on you cannot live without stops working,
+you can download older Anki versions from the [releases page](https://github.com/ankitects/anki/releases).
 
 ## Problems
 

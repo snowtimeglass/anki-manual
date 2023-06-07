@@ -17,11 +17,12 @@ Deck options are accessed by:
 
 This page describes the options shown in Anki 2.1.45+, when you have the v2 or
 v3 scheduler enabled. On older versions, some options will not be available, or
-will appear in a different section. Please keep in mind that the V1 scheduler 
+will appear in a different section. Please keep in mind that the V1 scheduler
 is no longer supported in Anki 2.1.50+. If you have not yet updated to V2 or V3,
 you will be prompted to update when you attempt to review cards in 2.1.50+.
 
 For more info on deck options, please check:
+
 - [Deck Options Explained](https://forums.ankiweb.net/t/deck-options-explained/213)
 - [Deck options in a Mental Map](https://forums.ankiweb.net/t/deck-options-in-a-mental-map/15757)
 
@@ -94,14 +95,14 @@ Controls how many new cards are introduced each day you open the program. If you
 study fewer than the limit, or miss a day, the next day the counts will be back
 to your limit - they do not accumulate.
 
-When decks are nested (eg Parent, Parent::Child, Parent::Child::Grandchild), 
+When decks are nested (eg Parent, Parent::Child, Parent::Child::Grandchild),
 the way the limits are applied depends on the scheduler version.
 
 - V1 applies parent limits to children, regardless of which deck you click on
-- V2 behaves similarly to V1 for new cards. For reviews, only the limits of 
-the deck you click on are honored.
-- V3 honors the limits of the deck you click on, and any decks inside it. 
-Limits from parents above the deck you clicked on are ignored.
+- V2 behaves similarly to V1 for new cards. For reviews, only the limits of
+  the deck you click on are honored.
+- V3 honors the limits of the deck you click on, and any decks inside it.
+  Limits from parents above the deck you clicked on are ignored.
 
 For more information, please see the [v3 scheduler](https://faqs.ankiweb.net/the-2021-scheduler.html#daily-limits) page.
 
@@ -114,16 +115,6 @@ introducing fewer new cards each day, or by turning off new card display until
 your review burden decreases. More than one Anki user has excitedly studied
 hundreds of new cards over their first few days of using the program, and then
 become overwhelmed by the reviews required.
-
-If using [the v3 scheduler](https://faqs.ankiweb.net/the-2021-scheduler.html#daily-limits),
-please keep in mind that the new count is capped by the review count. If your
-review limit is set to 200, and you have 190 reviews waiting, a maximum of 10
-new cards will be introduced. If your review limit has been reached, no new
-cards will be shown. If you have a backlog of reviews and still want to
-introduce new cards, you can do so by suspending the reviews, or increasing your
-review limit. That said, it is recommended you hold off on new cards until you
-catch up instead, as introducing more new cards when you're behind will only
-make the backlog worse.
 
 ### Maximum Reviews/Day
 
@@ -145,11 +136,26 @@ limits on its parents or child decks are ignored.
 The v3 scheduler includes learning cards with a 1+ day delay in the review count,
 so those learning cards will be subject to the daily limit.
 
+### New cards ignore review limit
+
+If using [the v3 scheduler](https://faqs.ankiweb.net/the-2021-scheduler.html#daily-limits),
+please keep in mind that the new count is capped by the review count by default. If your
+review limit is set to 200, and you have 190 reviews waiting, a maximum of 10
+new cards will be introduced. If your review limit has been reached, no new
+cards will be shown. If you have a backlog of reviews and still want to
+introduce new cards, you can do so by suspending the reviews, or increasing your
+review limit. That said, it is recommended you hold off on new cards until you
+catch up instead, as introducing more new cards when you're behind will only
+make the backlog worse.
+
+From Anki 2.1.61 this feature is optional, and can be deactivated globally from the
+deck options screen.
+
 ### Per-Deck Daily Limits
 
-From version 2.1.55 it is possible to use the same preset for different decks / subdecks, with customized 
-limits for each one of them. This eliminates the need to create cloned presets just for that 
-purpose, and makes it easier to set custom limits on sub-decks when you have many nested decks. 
+From version 2.1.55 it is possible to use the same preset for different decks / subdecks, with customized
+limits for each one of them. This eliminates the need to create cloned presets just for that
+purpose, and makes it easier to set custom limits on sub-decks when you have many nested decks.
 
 The options are:
 
@@ -188,7 +194,7 @@ early by default. The amount of time to look ahead is configurable in
 the [preferences](preferences.md).
 
 Please see the [learning](studying.md#learningrelearning-cards) section for more info on how
-steps work. 
+steps work.
 
 #### Day Boundaries
 
@@ -271,30 +277,28 @@ section for more information.
 The options in this section are taken from the deck you select to study, not
 the deck of the currently displayed card.
 
-This section is only available when you have [the v3
-scheduler](https://faqs.ankiweb.net/the-2021-scheduler.html) enabled.
+This section is only available when you have [the v3 scheduler](https://faqs.ankiweb.net/the-2021-scheduler.html) enabled.
 
-Some further information about display order is available in the [studying
-section](studying.md#display-order).
+Some further information about display order is available in the [studying section](studying.md#display-order).
 
 ### New Card Gather Order
 
 Controls how Anki gathers cards from each subdeck. The options are:
 
-- Deck: gathers cards from each deck in order, starting from the top. Cards from 
-each deck are gathered in ascending position. If the daily limit of the selected 
-deck is reached, gathering may stop before all decks have been checked. This 
-order is fastest in large collections, and allows you to prioritize subdecks that 
-are closer to the top.
+- Deck: gathers cards from each deck in order, starting from the top. Cards from
+  each deck are gathered in ascending position. If the daily limit of the selected
+  deck is reached, gathering may stop before all decks have been checked. This
+  order is fastest in large collections, and allows you to prioritize subdecks that
+  are closer to the top.
 
-   Decks / subdecks are always ordered alphabetically, so you can give them a numeric prefix like
-001 to control the order they are shown. You can also use `_` and `~` as a
-prefix to place items at the top or bottom.
+  Decks / subdecks are always ordered alphabetically, so you can give them a numeric prefix like
+  001 to control the order they are shown. You can also use `_` and `~` as a
+  prefix to place items at the top or bottom.
 
-   Although position order depends initially on the 'Insertion Order' setting
-above, you can manually
-[reposition](https://docs.ankiweb.net/browsing.html#cards) cards in different
-ways.
+  Although position order depends initially on the 'Insertion Order' setting
+  above, you can manually
+  [reposition](https://docs.ankiweb.net/browsing.html#cards) cards in different
+  ways.
 
 - Ascending position: gathers cards by ascending position (due #), which is typically the oldest-added first.
 
@@ -303,8 +307,6 @@ ways.
 - Random notes: gathers cards of randomly selected notes. When sibling burying is disabled, this allows all cards of a note to be seen in a session (eg. both a front->back and back->front card)
 
 - Random cards: gathers cards completely randomly.
-
-
 
 ### New Card Sort Order
 
@@ -332,46 +334,75 @@ reviews, some users prefer to see them at the end (getting the easy stuff done
 first), or at the start (allowing more time to review forgotten ones).
 
 ### Review Sort Order
+
 Controls how review cards are sorted while reviewing. The options are:
 
-- Due date, then random: The default option prioritizes cards that have been waiting 
-longer, and it's the recomended option when you are up to date, or when you only have a small 
-backlog. If you have taken an extended break or have fallen behind in your reviews, 
-you may want to consider changing the sort order temporarily.
-- Due date, then deck. This also prioritizes cards that have been waiting 
-longer, and then will show reviews for each subdeck in turn. 
+- Due date, then random: The default option prioritizes cards that have been waiting
+  longer, and it's the recomended option when you are up to date, or when you only have a small
+  backlog. If you have taken an extended break or have fallen behind in your reviews,
+  you may want to consider changing the sort order temporarily.
+- Due date, then deck. This also prioritizes cards that have been waiting
+  longer, and then will show reviews for each subdeck in turn.
 - Deck, then due date: This option will ensure reviews are shown for each
-subdeck in turn. This is generally not recommended, as having material appear
-consistently in the same order makes it easier to guess the answer based on context,
-and may lead to weaker memories.
+  subdeck in turn. This is generally not recommended, as having material appear
+  consistently in the same order makes it easier to guess the answer based on context,
+  and may lead to weaker memories.
 - Ascending intervals: This will ensure cards with shorter intervals are shown first.
 - Descending intervals: This will ensure cards with larger intervals are shown first.
-- Ascending ease: This will show most difficult cards first. 
+- Ascending ease: This will show most difficult cards first.
 - Descending ease: This will allow you to work through the easier material first.
-- Relative overdueness: Display those cards first, that are [most overdue in relation 
-to their current interval](./filtered-decks.html#order).
+- Relative overdueness: Display those cards first, that are [most overdue in relation
+  to their current interval](./filtered-decks.html#order).
 
 ## Timer
 
 Anki monitors how long it takes you to answer each card, so that it
 can show you how long was spent studying each day. The time taken does
-not influence scheduling. 
+not influence scheduling.
 
 The options are:
+
 - Maximum answer seconds: The default limit is 60 seconds. If you take
-longer than that, Anki assumes you have walked away from your computer
-or have been distracted, and limits the recorded time to 60 seconds, so
-that you don’t end up with inaccurate statistics. If you consistently
-take longer than 60 seconds to answer a card (from when question is shown
-until you press an answer button), you may want to either consider raising
-this limit, or ideally, making your cards simpler.
-- Show answer timer: In the review screen, show a timer that counts the number 
-of seconds you're taking to review each card.
+  longer than that, Anki assumes you have walked away from your computer
+  or have been distracted, and limits the recorded time to 60 seconds, so
+  that you don’t end up with inaccurate statistics. If you consistently
+  take longer than 60 seconds to answer a card (from when question is shown
+  until you press an answer button), you may want to either consider raising
+  this limit, or ideally, making your cards simpler.
+- Show answer timer: In the review screen, show a timer that counts the number
+  of seconds you're taking to review each card.
 
 ## Burying
 
-Please see [this section](./studying.md#siblings-and-burying) for more information.
+### Bury new siblings
 
+Whether other new cards of the same note (eg reverse cards, adjacent cloze deletions) will be delayed until the next day.
+
+When Anki gathers cards, it first gathers intraday learning cards, then interday learning cards, then reviews, and finally new cards. This affects how burying works:
+
+- If you have all burying options enabled, the sibling that comes earliest in that list will be shown. For example, a review card will be shown in preference to a new card.
+- Siblings later in the list can not bury earlier card types. For example, if you disable burying of new cards, and study a new card, it will not bury any interday learning or review cards, and you may see both a review sibling and new sibling in the same session.
+
+### Bury review siblings
+
+Whether other review cards of the same note will be delayed until the next day.
+
+When Anki gathers cards, it first gathers intraday learning cards, then interday learning cards, then reviews, and finally new cards. This affects how burying works:
+
+- If you have all burying options enabled, the sibling that comes earliest in that list will be shown. For example, a review card will be shown in preference to a new card.
+- Siblings later in the list can not bury earlier card types. For example, if you disable burying of new cards, and study a new card, it will not bury any interday learning or review cards, and you may see both a review sibling and new sibling in the same session.
+
+### Bury interday learning siblings
+
+Whether other learning cards of the same note with intervals > 1 day will be delayed until the next day.
+
+When Anki gathers cards, it first gathers intraday learning cards, then interday learning cards, then reviews, and finally new cards. This affects how burying works:
+
+- If you have all burying options enabled, the sibling that comes earliest in that list will be shown. For example, a review card will be shown in preference to a new card.
+
+- Siblings later in the list can not bury earlier card types. For example, if you disable burying of new cards, and study a new card, it will not bury any interday learning or review cards, and you may see both a review sibling and new sibling in the same session.
+
+For more info about burying cards, please see [this section](./studying.md#siblings-and-burying) of the manual.
 
 ## Audio
 
@@ -438,8 +469,7 @@ it to 90%. We’d calculate the modifier as:
 
     log(90%) / log(85%) = 0.65
 
-You can use Google to [calculate
-it](<https://www.google.com/search?q=log(90%25)+%2F+log(85%25)>) for you.
+You can use Google to [calculate it](https://www.google.com/search?q=log(90%25)+%2F+log(85%25)) for you.
 
 If you plug the resulting 65% into the interval modifier, you should
 find over time that your retention moves closer to your desired

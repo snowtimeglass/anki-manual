@@ -10,12 +10,12 @@ Things to be aware of:
   can resolve any setup/network/firewall issues you run into yourself, and
   use of this is entirely at your own risk.
 - Newer clients may depend on changes to the sync protocol, so syncing may
-stop working if you update your Anki clients without also updating the server.
+  stop working if you update your Anki clients without also updating the server.
 - Third-party sync servers also exist. No testing is done against them, and
-they tend to take time to catch up when the sync protocol changes, so they
-are not recommended.
+  they tend to take time to catch up when the sync protocol changes, so they
+  are not recommended.
 - The messages inside Anki will use the term 'AnkiWeb' even if a custom server
-has been configured, (eg "Cannot connect to AnkiWeb" when your server is down).
+  has been configured, (eg "Cannot connect to AnkiWeb" when your server is down).
 
 ## From a Packaged Build
 
@@ -23,7 +23,7 @@ On Windows in a cmd.exe session:
 
 ```
 set SYNC_USER1=user:pass
-"\program files\anki\anki-console.exe" --syncserver
+"\Program Files\anki\anki.exe" --syncserver
 ```
 
 Or MacOS, in Terminal.app:
@@ -88,6 +88,13 @@ Older desktop clients required you to define SYNC_ENDPOINT and SYNC_ENDPOINT_MED
 If using an older client, you'd put it as e.g. `http://192.168.1.200:8080/sync/`
 and `http://192.168.1.200:8080/msync/` respectively. AnkiDroid also currently
 requires separate configuration for the two endpoints.
+
+## Reverse Proxies
+
+If using a reverse proxy to provide HTTPS access (e.g. nginx), and binding to a subpath
+(e.g. `http://example.com/custom/` -> `http://localhost:8080/`), you must make sure to
+including a trailing slash when configuring Anki. If you put `http://example.com/custom`
+instead, it will not work.
 
 ## Large Requests
 
