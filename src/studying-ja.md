@@ -14,12 +14,14 @@ Ankiの学習は、現在選択しているデッキと、そのデッキに含�
 <!-- Study in Anki is limited to the currently selected deck as well as any
 subdecks it contains. -->
 
-「デッキ」画面では、あなたのデッキとサブデッキのリストが表示されます。
-<!-- On the decks screen, your decks and subdecks will be displayed in a list: -->
+「デッキ」画面では、あなたのデッキとサブデッキのリストが表示されます。その日の[新規、学習、期日（復習）](getting-started.md#types-of-cards)のカード数もここに表示されます。
+<!-- On the decks screen, your decks and subdecks will be displayed in a list. [New, Learn and Due (To Review)](getting-started.md#types-of-cards)
+cards for that day will be also displayed here. -->
 
 
 ![Decks screen](media/decks_screen.png)
 
+<!-- ※※改訂削除箇所※※※※※※※※※※※※※※※※※※※※※※※
 各デッキの名前が表示された列の右側に、さらに３つの列があります。
 * 「新規」の数字は、その日に学習できる状態にある、まだ学習していないカードの枚数を表しています。
 * 「習得中」の数字は、現在集中的に学習しているカードの枚数を表しています。
@@ -27,7 +29,8 @@ subdecks it contains. -->
 <!-- There are three columns. 'New' is the number of new
 cards that are ready to be learnt that day. 'Learn' shows
 the number of cards currently in learning. 'Due' is the count of waiting
-reviews. -->
+reviews. -　-　>
+※※※※※※※※※※※※※※※※※※※※※※※※※※※※-->
 
 デッキをクリックすると、そのデッキが「現在のデッキ」として選択され、そのデッキの概要画面に切り替わります。
 メインウィンドウ上部の「デッキ」をクリックすれば、いつでも、別のデッキを選ぶために「デッキ」画面に戻ることができます。
@@ -69,8 +72,8 @@ how many cards are due today. This is called the 'deck overview' screen: -->
 
 もし、デッキのオプションで[「カードの兄弟を翌日に延期する」](#siblings-and-burying)が有効になっていて、実際に延期するカードがある場合、そのカードの枚数が下図のように灰色の数字で表示されます。
 
-<!-- The cards are split into [three types](getting-started.md#types-of-cards): New, Learning, and To Review. 
-If you have [Bury siblings](#siblings-and-burying) activated in your deck options, you 
+<!-- The cards are split into [three types](getting-started.md#types-of-cards): New, Learning, and To Review.
+If you have [Bury siblings](#siblings-and-burying) activated in your deck options, you
 may see how many cards will be buried in grey: -->
 
 ![Study overview (Buried Cards)](media/study_overview_buried_cards.png)
@@ -111,29 +114,29 @@ steps and the delays between them in the [deck options](deck-options.md#new-card
 - **難しい**：現在のステップをもう一度繰り返します。 
   - 最初のステップでは、次のステップまでの時間間隔は「やり直し」と「正解」の各間隔の平均値となります。
   - 最初のステップ以外では、次のステップまでの時間間隔は、現在のステップまでの時間間隔と同じとなります。
-<!-- - **Hard** repeats the current step. 
+<!-- - **Hard** repeats the current step.
   - If the card is on the first step, the delay will be the average of Again and Good.
   - After the first step, Hard repeats the previous delay. -->
 
 - **正解**：そのカードを [次のステップ](deck-options.md#learning-steps)に進めます。
   - カードが最後のステップにある場合は、習得中カードを「卒業」し、「復習カード」に変わります。
   - 初期設定では、最後の習得ステップで正解したカードは、復習カードとして翌日に表示（出題）され、 その後、徐々に間隔を延ばしながら繰り返し表示されます（次のセクションを参照してください）。
-<!-- - **Good** moves the card to the [next step](deck-options.md#learning-steps). If the card was on the final
-step, the card is converted into a review card (it 'graduates'). By
-default, once the card has reached the end of the learning steps, the
-card will be shown again the next day, then at increasingly long delays
-(see the next section). -->
+  <!-- - **Good** moves the card to the [next step](deck-options.md#learning-steps). If the card was on the final
+  step, the card is converted into a review card (it 'graduates'). By
+  default, once the card has reached the end of the learning steps, the
+  card will be shown again the next day, then at increasingly long delays
+  (see the next section). -->
 
 - **簡単**：そのカードが最終ステップにない場合でも、そのカードを復習カードに変えます。 [初期設定](deck-options.md#easy-interval)では、そのカードは復習カードとして4日後に再び表示（出題）され、その後、徐々に間隔を延ばしながら繰り返し表示されます。
   - v1スケジューラーでは、再習得ステップ中は、「簡単」ボタンは表示されません。「簡単」と「正解」が同じ間隔であるためです。
   - [v2スケジューラー以降](https://faqs.ankiweb.net/the-anki-2.1-scheduler.html)では、再習得ステップの間は、「簡単」を選ぶと、復習カードとして再び表示（出題）されるまでの期間が、「正解」を選んだ場合よりも1日増えます。
 
 <!-- - **Easy** immediately converts the card into a review card, even if there
-were steps remaining. [By default](deck-options.md#easy-interval), the card will be shown again 4 days
-later, and then at increasingly long delays. In the v1 scheduler, the "Easy" button will not be
-shown if you are in relearning mode as it would give the same interval
-as “Good.” With the [v2 scheduler+](https://faqs.ankiweb.net/the-anki-2.1-scheduler.html),
-when cards are in relearning, the "Easy" button boosts the interval by 1 day. -->
+  were steps remaining. [By default](deck-options.md#easy-interval), the card will be shown again 4 days
+  later, and then at increasingly long delays. In the v1 scheduler, the "Easy" button will not be
+  shown if you are in relearning mode as it would give the same interval
+  as “Good.” With the [v2 scheduler+](https://faqs.ankiweb.net/the-anki-2.1-scheduler.html),
+  when cards are in relearning, the "Easy" button boosts the interval by 1 day. -->
 
 あるカードを初めて学習するとき、その学習は1段階目の習得ステップとして位置づけられます。
 
@@ -175,9 +178,9 @@ again, there are four buttons to rate your answer: -->
 - **やり直し** : あなたが正しく答えられなかった場合に押すボタンです。この回答によって、今後、そのカードが表示される頻度が上がります。
   - 復習カードに「やり直し」と回答する状態のことを、「忘却」といいます。 忘却したカードがどのように取り扱われるかについての詳細は、[「忘却」](deck-options.md#lapses)の項を参照してください。
 <!-- - **Again** marks your answer as incorrect and asks Anki to show the card
-more frequently in the future. The card is said to have 'lapsed'. Please
-see the [lapses](deck-options.md#lapses) section for more information about how lapsed
-reviews are handled. -->
+  more frequently in the future. The card is said to have 'lapsed'. Please
+  see the [lapses](deck-options.md#lapses) section for more information about how lapsed
+  reviews are handled. -->
 
 - **難しい** : 初期設定では、この回答をすると、今回の表示までの間隔と比べて、次回の表示までの[間隔が少しだけ広がります](deck-options.md#hard-interval)。
   - 少ししか広がらない、とも言え、この後説明する「正解」の回答をした場合と比べて、そのカードが表示される頻度が上がることになります。
@@ -193,7 +196,7 @@ than the previous time, so if you had waited 10 days to see the card
 previously, the next delay would be about 25 days. -->
 
 - **簡単** : この回答をすると、Ankiは、今回の復習までの間隔が短すぎた（＝もっと長くても問題ない）と判断し、次の復習までの間隔は[「正解」を回答した場合よりも広がります](deck-options.md#easy-bonus)。その結果、「正解」の回答をした場合と比べて、そのカードが表示される頻度は下がることになります。
-  - 「簡単」の回答は復習間隔を急激に延ばすので、本当に簡単すぎるカードに対してだけ使うのがよいでしょう。通常は、「正解」ボタンを使うことを強くおすすめします。
+     - 「簡単」の回答は復習間隔を急激に延ばすので、本当に簡単すぎるカードに対してだけ使うのがよいでしょう。通常は、「正解」ボタンを使うことを強くおすすめします。
 
 習得中カードの場合と同様に、キーボードの<kbd>1</kbd>、<kbd>2</kbd>、<kbd>3</kbd>、<kbd>4</kbd> キーで回答を選択することができます。<kbd>Space</kbd>キーまたは<kbd>Enter</kbd>キーを押すと、「正解」が選択されます。
 <!-- As with learning cards, you can use <kbd>1</kbd>, <kbd>2</kbd>, <kbd>3</kbd> and <kbd>4</kbd> on the keyboard to select an
@@ -229,7 +232,7 @@ increase by one regardless of the steps remaining. -->
 will be shown above each button. If you’d prefer not to see the
 estimates, you can disable them in Anki’s [preferences](preferences.md). -->
 
-## ファズの要素
+## ファズ（ゆらぎ）の要素
 <!-- ## Fuzz Factor -->
 
 同じタイミングで学習を開始し、同じ評価を受けたカードどうしがまとまったままで常に同じ日に表示されてしまうことを防ぐために、Ankiではカード学習で回答ボタンが選択された際、少量のランダムな「ファズ（ゆらぎ）」を学習時間の間隔に適用します。このファズは、[v3スケジューラー](https://faqs.ankiweb.net/the-2021-scheduler.html)が有効な場合に回答ボタンの上に表示されます。以前のバージョンを使用していて、選択した時間間隔と実際にカードが表示される時間間隔に若干の不一致がある場合は、この機能が原因である可能性があります。
@@ -381,10 +384,11 @@ card info screen.
 <!-- - **Replay Own Voice**: Replay the previous recording of your voice (presumably after showing
   the answer). -->
 
-## Display Order
+## 表示順序
+<!-- ## Display Order -->
 <!-- ## Display Order -->
 
-学習を開始すると、選択したデッキのカードと、そのデッキに含まれているデッキのカードを表示します。つまり、「英語」デッキを選択すると、そのサブデッキ「英語::単語」のカードや、同じくサブデッキ「英語::教科書::レッスン1」のカードも表示されます。
+学習を開始すると、選択したデッキのカードと、そのデッキに含まれているデッキ（＝サブデッキ）のカードを表示（出題）します。つまり、例えば「英語」デッキを選択すると、そのサブデッキ「英語::単語」のカードや、同じくサブデッキ「英語::教科書::レッスン1」のカードも表示されます。
 <!-- Studying will show cards from the selected deck and any decks it
 contains. Thus, if you select your “French” deck, the subdecks
 “French::Vocab” and “French::My Textbook::Lesson 1” will be shown as
@@ -392,7 +396,7 @@ well. -->
 
 Ankiがデッキからカードを取り出す方法は、使用するアルゴリズムによって異なります：
 <!-- The way Anki fetches cards from the decks depends on the algorithm used: -->
-
+   
 - v1スケジューラーでは、<span>選択した</span>デッキにサブデッキがある場合、[各<span>サブ</span>デッキごとに順番に](studying.md#display-order)カードが表示されます。
 <!-- - With the v1 scheduler, when a deck has subdecks, the cards will appear from [each deck in
   turn](studying.md#display-order). -->
@@ -405,13 +409,14 @@ Ankiがデッキからカードを取り出す方法は、使用するアルゴ�
   deck you clicked on applies. -->
 
 - [v3スケジューラー](https://faqs.ankiweb.net/the-2021-scheduler.html)では、
-  各サブデッキの出題枚数上限も適用されるため、<span class=unsure >カードをデッキの順序で見る必要はありません。</span>詳しくはデッキオプションの[出題カードの順序の並び替え](deck-options.md#review-sort-order)の項目を参照してください。
+  各サブデッキの出題枚数上限も適用されます。また、<span class=unsure >デッキの並び以外の順序でカードを学習することもできます。</span>詳しくはデッキオプションの[出題カードの順序の並び替え](deck-options.md#review-sort-order)の項目を参照してください。
   <span class=unsure></span><!-- ↑リンク先が妥当かどうか疑問 -->
 <!-- - With the [v3 scheduler](https://faqs.ankiweb.net/the-2021-scheduler.html)
   each child deck's limit is also enforced, and you do not need to see the cards
   in deck order either. See the [deck options](deck-options.md#review-sort-order) section of the manual for more information. -->
 
-By default, for new cards, Anki fetches cards from the decks in
+初期設定では、新規カードについては、Ankiはアルファベット順にデッキからカードを取得します。つまり、上記の例では、最初に「English（英語）」、次に「Textbook（教科書）」、最後に「Vocab（語彙）」からカードを取得することになります。これを利用すると、優先度の高いカードをリストの上位に表示されるデッキに配置することによって、カードの表示順をコントロールすることができます。コンピュータがテキストをアルファベット順に並べるとき、「-」はアルファベット文字の前に、「\~」はアルファベット文字の後に置かれます。ですから、上記の例の場合、「-Vocab」というデッキを作れば、そのデッキのカードを他のデッキのカードよりも先に表示させることができ、「\~Textbook」というデッキを作れば、そのデッキのカードを他のすべてのデッキのカードよりも後に表示させることができます。
+<!-- By default, for new cards, Anki fetches cards from the decks in
 alphabetical order. So in the above example, you would get cards first
 from “French”, then “My Textbook”, and finally “Vocab”. You can use this
 to control the order cards appear in, placing high priority cards in
@@ -419,70 +424,87 @@ decks that appear higher in the list. When computers sort text
 alphabetically, the “-” character comes before alphabetical characters,
 and “\~” comes after them. So you could call the deck “-Vocab” to make
 them appear first, and you could call the other deck “\~My Textbook” to
-force it to appear after everything else.
+force it to appear after everything else. -->
 
-New cards and reviews are fetched separately, and Anki won’t wait until
+新規カードと復習カードは別々に取得されます。Ankiは「両方のキューが空になるまで待ってから次のデッキに移る」ということはしないので、あるデッキの新規カードの学習をまだやり終えていないうちに次のデッキの復習カードが出題される、ということも（その逆も）起こりえます。そうしたくない場合は、親デッキではなく、学習したいデッキを直接クリックしてください。
+<!-- New cards and reviews are fetched separately, and Anki won’t wait until
 both queues are empty before moving on to the next deck, so it’s
 possible you’ll be exposed to new cards from one deck while seeing
 reviews from another deck, or vice versa. If you don’t want this, click
 directly on the deck you want to study instead of one of the parent
-decks.
+decks. -->
 
-Since cards in learning are somewhat time-critical, they are fetched
-from all decks at once and shown in the order they are due.
+習得中のカードは、タイミングを逃さず学習することが特に重要となるため、すべてのデッキから一度に取り出され、学習予定日時順に表示されます。
+<!-- Since cards in learning are somewhat time-critical, they are fetched
+from all decks at once and shown in the order they are due. -->
 
-To control the order reviews from a given deck appear in, or change new
+あるデッキの復習の順序を変更したり、新規カードの表示順をランダムにしたりするには、[デッキオプション](deck-options.md)の項を参照してください。新規カードをよりきめ細かい順序で並び変えたい場合は、[ブラウザ](browsing.md)で並べ替えることができます。
+<!-- To control the order reviews from a given deck appear in, or change new
 cards from ordered to random order, please see the [deck
 options](deck-options.md). For more fine-grained ordering of new cards, you
-can change the order in the [browser](browsing.md).
+can change the order in the [browser](browsing.md). -->
 
-## Siblings and Burying
+## 兄弟関係のカードと当日非表示
+<!-- ## Siblings and Burying -->
 
-Recall from [the basics](getting-started.md) that Anki can create more than one
+
+１つのノートから１つ以上のカードを作成できるというAnkiの[基本](getting-started.md)を思い出してください。例えば、表面に「英単語」フィールド、裏面に「英単語和訳」フィールドが表示されるカードと、表面に「英単語和訳」フィールド、裏面に「英単語」フィールドが表示されるカードを作成できます。また例えば、同じテキストから、穴埋め箇所が別々の２つのカードを作成できます。このように同じノートから作成されたカードどうしのことを「兄弟」といいます。
+
+<!-- Recall from [the basics](getting-started.md) that Anki can create more than one
 card for each thing you input, such as a front→back card and a
 back→front card, or two different cloze deletions from the same text.
-These related cards are called 'siblings'.
+These related cards are called 'siblings'. -->
 
-When you answer a card that has siblings, Anki can prevent the card’s
+回答したカードに兄弟がいる場合、そのカードの兄弟が同じセッションで提示されないよう、自動的にその兄弟を当日は非表示にすることができます。非表示とされたカードは、翌日になるか、[デッキ概要](studying.md#study-overview)画面下部の「非表示を解除」ボタンを押すまで、学習画面に表示されません。兄弟が他のデッキにいる場合（例えば、[デッキ選択を上書き](templates/intro.md)機能を利用した場合）でも同様に非表示となります。
+<!-- When you answer a card that has siblings, Anki can prevent the card’s
 siblings from being shown in the same session by automatically 'burying'
 them. Buried cards are hidden from review until the clock rolls over to
 a new day or you manually unbury them using the “Unbury” button that’s
 visible at the bottom of the [deck overview](studying.md#study-overview) screen. Anki
 will bury siblings even if the siblings are not in the same deck (for
-instance, if you use the [deck override](templates/intro.md) feature).
+instance, if you use the [deck override](templates/intro.md) feature). -->
 
-You can enable burying from the [deck options](deck-options.md) screen -
-there are separate settings for new cards and reviews.
+この設定は[デッキオプション](deck-options.md)画面で行うことができます。なお、兄弟が新規カードである場合と復習カードである場合、それぞれ別々に設定します。
+<!-- You can enable burying from the [deck options](deck-options.md) screen -
+there are separate settings for new cards and reviews. -->
 
-Anki will only bury siblings that are new or review cards. It will not
+Ankiがカードの兄弟を同日非表示とするのは、その兄弟が新規カードか復習カードである場合のみです。つまり、兄弟が習得中カードである場合はその兄弟を同日非表示とはしません。これは、習得中カードは学習のタイミングが特に重要なためです。一方、習得中カードを学習した場合、その兄弟の新規カード・復習カードがあれば、それらはすべて当日は非表示となります。
+<!-- Anki will only bury siblings that are new or review cards. It will not
 hide cards in learning, as time is of the essence for those cards. On
 the other hand, when you study a learning card, any new/review siblings
-will be buried.
+will be buried. -->
 
-Note: A card cannot be buried and suspended at the same time. Suspending a
+注：一つのカードに対して、当日非表示と休止を同時に行うことはできません。当日非表示済みカードを休止すると、非表示が解除されます。休止済みカードを当日非表示にしようとしても、Anki2.1.49以降では何も起こりません（それより前のバージョンでは休止が解除されます）。
+<!-- Note: A card cannot be buried and suspended at the same time. Suspending a
 buried card will unbury it. Burying a suspended card does not work on Anki
-2.1.49+, whereas on earlier versions, it will unsuspend the card.
+2.1.49+, whereas on earlier versions, it will unsuspend the card. -->
 
-## Keyboard Shortcuts
+## キーボードショートカット
+<!-- ## Keyboard Shortcuts -->
 
-Most of the common operations in Anki have keyboard shortcuts. Most of
+Ankiの一般的な操作のほとんどはキーボードショートカットに対応しています。それらのほとんどはインターフェース上で見ることができます。メニュー項目は、右横にショートカットが表示されています。各ボタンにマウスカーソルを合わせると、通常、ショートカットがツールチップで表示されます。
+<!-- Most of the common operations in Anki have keyboard shortcuts. Most of
 them are discoverable in the interface: menu items list their shortcuts
 next to them, and hovering the mouse cursor over a button will generally
-show its shortcut in a tooltip.
+show its shortcut in a tooltip. -->
 
-When studying, either <kbd>Space</kbd> or <kbd>Enter</kbd> will show the answer. When the
+学習中は、 <kbd>Space</kbd>キーまたは<kbd>Enter</kbd>キーを押すと、解答が表示されます。 解答が表示された後に<kbd>Space</kbd>キーまたは<kbd>Enter</kbd>キーを押すと「正解」が選択されます。
+<kbd>1</kbd>～<kbd>4</kbd>キーで各回答ボタンが選択されます。 
+お勧めのやり方は「基本的に<kbd>Space</kbd>キーで解答表示と回答をしていき、答えられなかったときのために<kbd>1</kbd>キーに指を乗せておく」というものです。
+<!-- When studying, either <kbd>Space</kbd> or <kbd>Enter</kbd> will show the answer. When the
 answer is shown, you can use <kbd>Space</kbd> or <kbd>Enter</kbd> to select the Good button.
 You can use the <kbd>1</kbd>-<kbd>4</kbd> keys to select a specific ease button. Many people
 find it convenient to answer most cards with <kbd>Space</kbd> and keep one finger
-on <kbd>1</kbd> for when they forget.
+on <kbd>1</kbd> for when they forget. -->
 
-The "Study Deck" item in the Tools menu allows you to quickly switch to
+メニューの[ツール]>[デッキを選択]を使うと、選択デッキをキーボード操作で素早く切り替えることができます。<kbd>/</kbd>キーを押すとこの機能が選択され、すべてのデッキとフィルター欄が表示されます。フィルター欄に文字を入力すると、その文字を含むデッキだけが表示されます。複数の検索語を用いる場合は各検索語の間を半角スペースで区切ってください。 例えば多くのデッキの中から “Japanese::Lesson1” というデッキを選択したい場合は、“ja 1” や “on1 ja” のように入力すると、デッキを手早く絞り込むのに役立つでしょう。 
+<!-- The "Study Deck" item in the Tools menu allows you to quickly switch to
 a deck with the keyboard. You can trigger it with the '/' key. When
 opened, it will display all of your decks and show a filter area at the
 top. As you type characters, Anki will display only decks matching the
 characters you type. You can add a space to separate multiple search
 terms, and Anki will show only decks that match all the terms. So “ja 1”
-or “on1 ja” would both match a deck called “Japanese::Lesson1”.
+or “on1 ja” would both match a deck called “Japanese::Lesson1”. -->
 
 ## Falling Behind
 
